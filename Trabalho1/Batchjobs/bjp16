@@ -1,0 +1,20 @@
+#!/bin/bash
+#SBATCH --export=ALL
+#SBATCH -N 1
+#SBATCH -t 300
+#SBATCH --exclusive
+#SBATCH --no-requeue
+#SBATCH -o bjp16.out
+#SBATCH -D /home/pp03008/trab_i
+echo bsp-25.16
+echo Initial Time is `date`
+./bsp-25.16 > ./tmp/bsp-25.16.tmp
+echo Final Time is `date`
+echo bsp-150.16
+echo Initial Time is `date`
+./bsp-150.16 > ./tmp/bsp-150.16.tmp
+echo Final Time is `date`
+echo bsp-500.16
+echo Initial Time is `date`
+./bsp-500.16 > ./tmp/bsp-500.16.tmp
+echo Final Time is `date`
